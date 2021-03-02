@@ -2,7 +2,7 @@
 
 #pip3 -r install requirements.txt
 
-
+#
 #Usage 
 git clone https://github.com/dev0ps221/Googler/ && cd Googler (optional)
 
@@ -14,8 +14,9 @@ git clone https://github.com/dev0ps221/Googler/ && cd Googler (optional)
 #chmod +x Googler 
 #
 ##DIRECT RUN
-cd output/Googler
+#cd output/Googler
 #
 ##run
 ./Googler search string
 ./Googler (interactive)
+#
