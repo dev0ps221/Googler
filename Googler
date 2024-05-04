@@ -13,7 +13,7 @@ def text(msg,color='magenta'):
     print(bcolors.colorize(bcolors,msg,color))
     print(Style.RESET_ALL)
 def make_search(query):
-    res = search(query, advanced=True)
+    res = search(query, advanced=True,lang="fr")
     text('search results for :'+query)
     for r in res:
         text("[["+r.title+"]]",'blue')
