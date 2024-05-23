@@ -1,46 +1,4 @@
 #!/usr/bin/env python3
-from sys import argv
-from googlesearch import search
-from os import system
-from colorama import just_fix_windows_console,init as init_colors,Fore, Back, Style
-just_fix_windows_console()
-init_colors()
-class bcolors:
-    def colorize(self,text,fore='magenta'):
-        fore           =       getattr(Fore,fore.upper()) if hasattr(Fore,fore.upper()) else ""
-        return          fore   +       text  
-def text(msg,color='magenta'):
-    print(bcolors.colorize(bcolors,msg,color))
-    print(Style.RESET_ALL)
-def make_search(query,lang='fr'):
-    res = search(query, advanced=True,lang)
-    text('search results for :'+query)
-    for r in res:
-        text("[["+r.title+"]]",'blue')
-        text(r.description+':','white')
-        text("Lien ici: ]=-> "+r.url+" <-=[",'green')
-
-query = ""
-if len(argv) > 1:
-    query = " ".join(argv[1:])
-try:
-    if len(argv) > 1:
-        make_search(query)
-    else :
-        while search != 'exit' or search != 'quit':
-            query = input("Googler>")
-            make_search(query)
-except Exception as e:
-    text(e,'fail')
-
-
-class Googler:
-    def search(query):
-
-
-    def __init(self,type='console'):
-        self.type = type
-    
-
-    def run(self):
-        if(self.type == 'console')
+from Googler import Googler
+app = Googler('en')
+app.run()
